@@ -17,6 +17,6 @@ def create_tables():
     if request.endpoint == "index":
         db.create_all()
 
-from .models import agendamento_model, login_model, servicos, profissional, usuario_model
+from .models import agendamento_model, login_model, profissional_model, servicos_model, usuario_model
 
 #TODO - Importar as views para a API encontrar as Rotas
