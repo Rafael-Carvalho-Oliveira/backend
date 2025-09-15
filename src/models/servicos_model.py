@@ -1,6 +1,6 @@
 from src import db
 
-class Servicos(db.Model):
+class ServicoModel(db.Model):
     __tablename__ = "tb_servico"
 
     id = db.Column(db.Integer, primary_key = True, autoincrement = True)

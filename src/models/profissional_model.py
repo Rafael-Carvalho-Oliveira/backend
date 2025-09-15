@@ -1,6 +1,6 @@
 from src import db
 
-class Profissional(db.Model):
+class ProfissionalModel(db.Model):
     __tablename__ = "tb_profissional"
 
     id = db.Column(db.Integer, primary_key = True, autoincrement = True)
