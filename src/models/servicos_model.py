@@ -6,7 +6,4 @@ class ServicoModel(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement = True)
     descricao = db.Column(db.String(120), nullable = False)
     valor = db.Column(db.Float, nullable = False)
-
-    def __init__(self, descricao, valor):
-        self.descricao = descricao
-        self.valor = valor
+    horario_duracao = db.Column(db.Float, nullable = False)

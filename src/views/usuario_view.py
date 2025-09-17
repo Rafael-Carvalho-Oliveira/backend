@@ -4,7 +4,7 @@ from ..schemas import usuario_schema
 from flask import request, jsonify, make_response
 from ..services import usuario_services
 from src import api
-from src.models.usuario_model import Usuario
+from src.entities import usuario
 
 # POST-GET-PUT-DELETE
 class UsuarioList(Resource):
@@ -31,7 +31,7 @@ class UsuarioList(Resource):
         
         try:
             # criação do novo usuario no banco
-            novo_usuario = Usuario(
+            novo_usuario = usuario.Usuario(
                 nome = dados["nome"],
                 email = dados["email"],
                 telefone = dados["telefone"],
@@ -65,4 +65,4 @@ class UsuarioResource(Resource):
         except Exception as e:
             return make_response(jsonify({"message":str(e)}), 400)
 
-api.add_resource(UsuarioResource, "usuario/<int:id_usuario>") # /usuario/1
+api.add_resource(UsuarioResource, "/usuario/<int:id_usuario>") # /usuario/1

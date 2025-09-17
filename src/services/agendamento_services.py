@@ -21,15 +21,6 @@ class AgendamentoService:
     HORA_ALMOCO_INICIO = 12  # almoço começa às 12h
     HORA_ALMOCO_FIM = 13  # almoço termina às 13h
     
-    # Duração padrão de cada tipo de serviço (em minutos)
-    DURACAO_SERVICOS = {
-        'alisamento': 30,
-        'corte tesoura': 60,
-        'corte maquina': 60,
-        'barba': 30,
-        'sobrancelha': 10,
-        'pintura': 120
-    }
     
     @staticmethod
     def criar_agendamento(dt_atendimento: datetime, id_user: int, 

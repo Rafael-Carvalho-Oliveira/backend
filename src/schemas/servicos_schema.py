@@ -4,7 +4,7 @@ from marshmallow import fields
 
 class ServicosSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        model = servicos_model.Servicos
+        model = servicos_model.ServicoModel
 
         fields = ("id", "descricao", "valor")
     

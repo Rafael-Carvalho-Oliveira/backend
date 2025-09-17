@@ -10,11 +10,6 @@ class UsuarioModel(db.Model):
     telefone = db.Column(db.String(45), nullable = False)
     senha = db.Column(db.String(255), nullable = False)
     
-    def __init__(self, nome, email, telefone, senha):
-        self.nome = nome
-        self.email = email
-        self.telefone = telefone
-        self.senha = senha
     def gen_senha(self, senha):
         self.senha = sha256.hash(senha)
     

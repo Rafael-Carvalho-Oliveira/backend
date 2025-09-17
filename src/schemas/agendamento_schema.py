@@ -4,7 +4,7 @@ from marshmallow import fields
 
 class AgendamentoSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        model = agendamento_model.Agendamento
+        model = agendamento_model.AgendamentoModel
 
         fields = ("id", "dt_agendamento", "dt_atendimento", "User_idUser", "Servicos_idServicos", "Profissional_idProfissional")
 

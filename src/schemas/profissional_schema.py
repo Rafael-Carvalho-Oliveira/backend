@@ -4,7 +4,7 @@ from marshmallow import fields
 
 class LoginSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        model = profissional_model.Profissional
+        model = profissional_model.ProfissionalModel
 
         fields = ("id", "nome")
 
